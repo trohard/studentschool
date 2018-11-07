@@ -7,7 +7,7 @@ var StudentSchema = new Schema(
     first_name: {type: String, required: true, max: 100},
     family_name: {type: String, required: true, max: 100},
 	school: { type: Schema.Types.ObjectId, ref: 'School', required: true }, //reference to the associated school
-    grade: {type: String, required: true, enum: ['K','1','2','3','4','5','6','7','8','9','10','11','12']},
+    grade: {type: Number, required: true, min:0, max: 12, default: 0},
 	email: {type: String, required: false},
 	phone: {type: String, required: false}
   }
