@@ -19,23 +19,15 @@ exports.school_get = function(req, res) {
 }
 
 exports.school_update = function(req, res) {
-    const query = req.query // require: id, key=value
-	const schoolId = query.id
-	delete query['id']
+    res.send('NOT IMPLEMENTED');
+}
 
-	Profile.findByIdAndUpdate(schoolId, query, {new:true})
-	.then(school => {
-		res.json({
-			confirmation: 'success',
-			data: school
-		})
-	})
-	.catch(err => {
-		res.json({
-			confirmation: 'fail',
-			message: err.message
-		})
-	})
+exports.school_remove = function(req, res) {
+    res.send('NOT IMPLEMENTED');
+}
+
+exports.school_id = function(req, res) {
+    res.send('NOT IMPLEMENTED');
 }
 
 exports.school_post = function(req, res) {
